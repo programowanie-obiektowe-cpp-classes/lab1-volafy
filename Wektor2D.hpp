@@ -5,16 +5,16 @@ class Wektor2D{
         double X;
         double Y;
 
-        
-
-        Wektor2D(double x, double y){
-            X = x;
-            Y = y;
-        }
 
     public:
 
         Wektor2D(): X{0},Y{0}{}
+        
+        
+        Wektor2D(double x, double y){
+            X = x;
+            Y = y;
+        }
 
         void setX(double x){X=x;}
         void setY(double y){Y=y;}
@@ -24,6 +24,7 @@ class Wektor2D{
         
 
 };
+
 Wektor2D operator+(Wektor2D v1, Wektor2D v2){
 
     Wektor2D newvector;
@@ -31,7 +32,7 @@ Wektor2D operator+(Wektor2D v1, Wektor2D v2){
     newvector.setY(v1.getY()+v2.getY());
 
     return (newvector);
-}
+};
 
 double operator*(Wektor2D v1, Wektor2D v2){
 
@@ -39,4 +40,4 @@ double operator*(Wektor2D v1, Wektor2D v2){
     
 
     return (result);
-}
+};
